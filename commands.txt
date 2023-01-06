@@ -2,12 +2,15 @@ python -m venv venv
 venv\Scripts\activate
 # Running pip as module required for upgrading itself on Windows
 python -m pip install -U pip setuptools wheel
+
+# Old way
 python setup.py bdist_wheel
+
 # Install current project in editable mode
 python -m pip install -e .
 
 # Check project works
 huge-cli
 
-# Check tests work
+# Check unit tests work
 python -m unittest discover -s tests/
